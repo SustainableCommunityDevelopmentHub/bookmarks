@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <link rel="stylesheet" href="third_party/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="BookmarkTree.css">
+    <script type="application/javascript" src="bookmark/BrowserVendor.js"></script> <!-- Must be loaded before polyfill -->
+    <script type="application/javascript" src="third_party/bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="third_party/FileSaver.js-2.0.4/dist/FileSaver.js"></script>
+    <script type="application/javascript" src="third_party/browser-polyfill.min.js"></script>
+    <script type="module" src="bookmarks.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="d-flex min-vh-100">
+        <div class="p-3 bg-dark text-white">
+          <h3><img src="icon/48.png">SCD Hub Library Builders Bookmarking Tool</h3>
+          <hr>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" id="export-tab" data-bs-toggle="tab" data-bs-target="#export" type="button">Export</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="import-tab" data-bs-toggle="tab" data-bs-target="#import" type="button">Import</a>
+            </li>
+          </ul>
+        </div>
+        <div class="p-3">
+          <div class="tab-content">
+            <div class="tab-pane fade tree" id="import">
+              <button id="btn-import" class="btn btn-primary">Import selected</button>
+            </div>
+            <div class="tab-pane fade tree" id="export">
+              <button id="btn-export" class="btn btn-primary">Export selected</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
